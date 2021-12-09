@@ -7,9 +7,10 @@ Switch,
 Route,
 Link
 } from "react-router-dom";
-
+const faker = require('faker');
 
 const App = () =>{
+    const [basket,setBasket]=useState([])
     const [sale,setSale] = useState("")
     const [loading,setLoading] = useState(false)
     const [error,setError] = useState({
@@ -26,10 +27,19 @@ const App = () =>{
         const data = await response.json()
         setSale(data)
         setLoading(false)
+        const updateData = await fakeDataHandler(data)
+        setSale(data)
+        setLoading(false)
         }catch (error) {
         setError({error:true,message:error.message})
         }
         
+    }
+    const fakeDataHandler = (data) =>{
+        data.map((cat)=>{
+            cat["name"] = faker.name.firstName()
+            cat["price"] = faker.commerce.price()
+        })
     }
     useEffect(()=>{
         getter()
@@ -52,14 +62,14 @@ const App = () =>{
         return (
         <div className="cats">
         <h1 className="header">Cats For Sale</h1>
-        <Cat sale={sale}/>
+        <Cat setBasket={setBasket} basket={basket} sale={sale}/>
     </div>
     )
     }
     function Checkout(){
         return(
             <div>
-            <Basket cart={sale}/>
+            <Basket basket={basket} setBasket={setBasket}/>
             </div>
         )
     }
@@ -106,37 +116,22 @@ const App = () =>{
     )
 }
 
-const Cat = ({sale}) => {
-    const [cat,setCat] = useState("")
-    const catS=()=>{
-        setCat(sale)
-    }
-    const randomPrice = () =>{
-        let price = Math.floor(Math.random()*200)
-        return(
-            price
-        )
-    }
-    useEffect(()=>{
-        catS()
-    },[])
-    useEffect(()=>{
-        randomPrice()
-    },[])
-    if(!cat){
-        return null
+const Cat = ({sale, setBasket, basket}) => {
+    const updateBasket = (cat) =>{
+        let stored = [...basket]
+        stored.push(cat)
+        setBasket(stored)
     }
     if(!sale){
         return null
     }
     return(
         <div className="catt">
-            {cat.map((img,index)=>{
+            {sale.map((cat,index)=>{
             return( 
                 <div>
-                <img key={index} src={img.url}/>
-                <h2>Price: £{randomPrice(index)}</h2>
-                <button>Add to basket</button>
+                <img key={index} src={cat.url}/>
+                <button onClick={ () => updateBasket(cat)}>Add to basket</button>
                 </div>
             )
             })} 
@@ -144,25 +139,19 @@ const Cat = ({sale}) => {
     )
 }
 
-const Basket = ({storedCart}) => {
-    const [cart, setCart] = useState([])
-    const addHandler = () =>{
-        let storedCart = [...cart]
-        storedCart.push(setCart)
-        setCart(storedCart)
-    }
+const Basket = ({basket,setBasket}) => {
     const deleteHandler = (index) =>{
-        let storedCart = [...cart]
+        let storedCart = [...basket]
         storedCart.splice(index,1)
-        setCart(storedCart)
+        setBasket(storedCart)
     }
 return(
     <div>
     <h1>Basket</h1>
-    <button type="button" onClick = {addHandler}>+</button>
-    {cart && 
-    cart.map((index) =>{
+    {basket && 
+    basket.map((cat,index) =>{
         return (<div key={index} value = "item">
+            <img src={cat.url}/>
         <button onClick = {() => deleteHandler(index)}>-</button>
         </div>)
     })}

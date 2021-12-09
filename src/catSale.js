@@ -27,7 +27,7 @@ const App = () =>{
         const data = await response.json()
         setSale(data)
         setLoading(false)
-        const updateData = await fakeDataHandler(data)
+        const fakeData = await fakeDataHandler(data)
         setSale(data)
         setLoading(false)
         }catch (error) {
@@ -131,6 +131,8 @@ const Cat = ({sale, setBasket, basket}) => {
             return( 
                 <div>
                 <img key={index} src={cat.url}/>
+                <h2>{cat.name}</h2>
+                <h2>Price: £{cat.price}</h2>
                 <button onClick={ () => updateBasket(cat)}>Add to basket</button>
                 </div>
             )
@@ -152,7 +154,9 @@ return(
     basket.map((cat,index) =>{
         return (<div key={index} value = "item">
             <img src={cat.url}/>
-        <button onClick = {() => deleteHandler(index)}>-</button>
+            <h2>{cat.name}</h2>
+            <h2>{cat.price}</h2>
+        <button onClick = {() => deleteHandler(index)}>Remove from Basket</button>
         </div>)
     })}
     </div> )

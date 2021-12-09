@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/KarlSherman1999/CatSite.git/static/css/main.84600b2d.chunk.css",
+    "main.js": "/KarlSherman1999/CatSite.git/static/js/main.fbab184e.chunk.js",
+    "main.js.map": "/KarlSherman1999/CatSite.git/static/js/main.fbab184e.chunk.js.map",
+    "runtime-main.js": "/KarlSherman1999/CatSite.git/static/js/runtime-main.57de9e7e.js",
+    "runtime-main.js.map": "/KarlSherman1999/CatSite.git/static/js/runtime-main.57de9e7e.js.map",
+    "static/js/2.947f06ef.chunk.js": "/KarlSherman1999/CatSite.git/static/js/2.947f06ef.chunk.js",
+    "static/js/2.947f06ef.chunk.js.map": "/KarlSherman1999/CatSite.git/static/js/2.947f06ef.chunk.js.map",
+    "index.html": "/KarlSherman1999/CatSite.git/index.html",
+    "static/css/main.84600b2d.chunk.css.map": "/KarlSherman1999/CatSite.git/static/css/main.84600b2d.chunk.css.map",
+    "static/js/2.947f06ef.chunk.js.LICENSE.txt": "/KarlSherman1999/CatSite.git/static/js/2.947f06ef.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57de9e7e.js",
+    "static/js/2.947f06ef.chunk.js",
+    "static/css/main.84600b2d.chunk.css",
+    "static/js/main.fbab184e.chunk.js"
+  ]
+}

@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/CatSite/static/css/main.84600b2d.chunk.css",
-    "main.js": "/CatSite/static/js/main.23714484.chunk.js",
-    "main.js.map": "/CatSite/static/js/main.23714484.chunk.js.map",
+    "main.css": "/CatSite/static/css/main.7ba59c1f.chunk.css",
+    "main.js": "/CatSite/static/js/main.548025cb.chunk.js",
+    "main.js.map": "/CatSite/static/js/main.548025cb.chunk.js.map",
     "runtime-main.js": "/CatSite/static/js/runtime-main.100d8dd9.js",
     "runtime-main.js.map": "/CatSite/static/js/runtime-main.100d8dd9.js.map",
     "static/js/2.9b18f736.chunk.js": "/CatSite/static/js/2.9b18f736.chunk.js",
     "static/js/2.9b18f736.chunk.js.map": "/CatSite/static/js/2.9b18f736.chunk.js.map",
     "index.html": "/CatSite/index.html",
-    "static/css/main.84600b2d.chunk.css.map": "/CatSite/static/css/main.84600b2d.chunk.css.map",
+    "static/css/main.7ba59c1f.chunk.css.map": "/CatSite/static/css/main.7ba59c1f.chunk.css.map",
     "static/js/2.9b18f736.chunk.js.LICENSE.txt": "/CatSite/static/js/2.9b18f736.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.100d8dd9.js",
     "static/js/2.9b18f736.chunk.js",
-    "static/css/main.84600b2d.chunk.css",
-    "static/js/main.23714484.chunk.js"
+    "static/css/main.7ba59c1f.chunk.css",
+    "static/js/main.548025cb.chunk.js"
   ]
 }

@@ -69,6 +69,9 @@ const App = () =>{
     function Checkout(){
         return(
             <div>
+                <div>
+                <h1>Basket</h1>
+                </div>
             <Basket basket={basket} setBasket={setBasket}/>
             </div>
         )
@@ -148,8 +151,7 @@ const Basket = ({basket,setBasket}) => {
         setBasket(storedCart)
     }
 return(
-    <div>
-    <h1>Basket</h1>
+    <div className="catt">
     {basket && 
     basket.map((cat,index) =>{
         return (<div key={index} value = "item">

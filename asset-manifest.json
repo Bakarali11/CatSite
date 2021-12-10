@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/CatSite/static/css/main.ab075550.chunk.css",
-    "main.js": "/CatSite/static/js/main.1c6f1f4a.chunk.js",
-    "main.js.map": "/CatSite/static/js/main.1c6f1f4a.chunk.js.map",
+    "main.css": "/CatSite/static/css/main.35bf1610.chunk.css",
+    "main.js": "/CatSite/static/js/main.73ad8b47.chunk.js",
+    "main.js.map": "/CatSite/static/js/main.73ad8b47.chunk.js.map",
     "runtime-main.js": "/CatSite/static/js/runtime-main.100d8dd9.js",
     "runtime-main.js.map": "/CatSite/static/js/runtime-main.100d8dd9.js.map",
     "static/js/2.db009105.chunk.js": "/CatSite/static/js/2.db009105.chunk.js",
     "static/js/2.db009105.chunk.js.map": "/CatSite/static/js/2.db009105.chunk.js.map",
     "index.html": "/CatSite/index.html",
-    "static/css/main.ab075550.chunk.css.map": "/CatSite/static/css/main.ab075550.chunk.css.map",
+    "static/css/main.35bf1610.chunk.css.map": "/CatSite/static/css/main.35bf1610.chunk.css.map",
     "static/js/2.db009105.chunk.js.LICENSE.txt": "/CatSite/static/js/2.db009105.chunk.js.LICENSE.txt",
     "static/media/index.css": "/CatSite/static/media/background.5b689cb4.png",
-    "static/media/cat1.23c35d53.jpg": "/CatSite/static/media/cat1.23c35d53.jpg"
+    "static/media/cat1.23c35d53.jpg": "/CatSite/static/media/cat1.23c35d53.jpg",
+    "static/media/home.bdea61de.jpg": "/CatSite/static/media/home.bdea61de.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.100d8dd9.js",
     "static/js/2.db009105.chunk.js",
-    "static/css/main.ab075550.chunk.css",
-    "static/js/main.1c6f1f4a.chunk.js"
+    "static/css/main.35bf1610.chunk.css",
+    "static/js/main.73ad8b47.chunk.js"
   ]
 }

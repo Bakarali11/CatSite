@@ -42,7 +42,7 @@ const App = () =>{
     const fakeDataHandler = (data) =>{
         data.map((cat)=>{
             cat["name"] = faker.name.firstName()
-            cat["price"] = faker.commerce.price()
+            cat["price"] = parseInt(faker.commerce.price())
         })
     }
     useEffect(()=>{
@@ -55,7 +55,11 @@ const App = () =>{
         return <h1>{error.message}</h1>
     }
     function Home() {
-        return <h1 className="header">Home</h1>;
+        return(
+            <div>
+            <h1 className="header">Home</h1>;
+            </div>
+        )
     }
     
     function About() {
@@ -81,7 +85,7 @@ const App = () =>{
                 <h1>Basket</h1>
                 </div>
             <Basket basket={basket} setBasket={setBasket}/>
-            <h2>Total: £</h2>
+            <h2>Total: £ WIP</h2>
             </div>
         )
     }
@@ -144,7 +148,7 @@ const Cat = ({sale, setBasket, basket}) => {
                 <div>
                 <img key={index} src={cat.url}/>
                 <h2>{cat.name}</h2>
-                <h2>Price: £{cat.price}</h2>
+                <h2>Price: £{[cat.price]}</h2>
                 <button onClick={ () => {updateBasket(cat)}}>Add to basket</button>
                 </div>
             )
@@ -166,7 +170,7 @@ return(
         return (<div key={index} value = "item">
             <img src={cat.url}/>
             <h2>{cat.name}</h2>
-            <h2>{cat.price}</h2>
+            <h2>Price: £{[cat.price]}</h2>
         <button onClick = {() => deleteHandler(index)}>Remove from Basket</button>
         </div>)
     })}
@@ -184,16 +188,12 @@ const Aboutt = () => {
         <br />
         <p>Our vision is a world where every cat is treated with kindness and an understanding of it's needs. Yes we know its an ambitious vision. However, we truly believe it can be achieved because of our passion, our professional approach and simply because cats are among the UK's most popular companion pets.</p>
         <br />
-        </div>
-        function images() {
-            return(
-                <div>
+            <div className="catt">
                 <img src={img1} height={200} width={200} alt=''/>
                 <img src={img2} height={200} width={200} alt='' />
                 <img src={img3} height={200} width={200} alt='' />
-                </div>
-            )
-        }
+            </div>
+        </div>
     }
 
 

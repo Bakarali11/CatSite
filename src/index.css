@@ -103,3 +103,8 @@ button {
 p{
     font-size: 30px;
 }
+.home{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}

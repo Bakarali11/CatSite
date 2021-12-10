@@ -2,6 +2,7 @@ import { useState } from "react";
 import img1 from './cat1.jpg';
 import img2 from './cat2.jpg';
 import img3 from './cat3.jpg';
+import img4 from './home.jpg';
 import { useEffect } from "react";
 import React from "react";
 import {
@@ -57,7 +58,8 @@ const App = () =>{
     function Home() {
         return(
             <div>
-            <h1 className="header">Home</h1>;
+            <h1 className="header">Welcome to CATS4LYFE!!!!</h1>
+            <img className="home" src={img4}/>
             </div>
         )
     }
